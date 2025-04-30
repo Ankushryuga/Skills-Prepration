@@ -1,3 +1,8 @@
+## Resource
+
+https://github.com/milanm/DevOps-Roadmap/tree/master
+
+
 ## ci/cd cheat shit
 
 **Continuous Integration (CI)** is the process of automatically building and testing your code on every source control commit.
