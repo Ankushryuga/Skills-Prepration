@@ -1,6 +1,7 @@
 ## Resource: for monolythic and microservice architecture:
 https://earthly.dev/blog/monorepo-vs-polyrepo/
 https://amplication.com/blog/communication-in-a-microservice-architecture
+https://medium.com/nerd-for-tech/transactions-in-distributed-systems-b5ceea869d7d
 ## Microservice introduction
 Microservices is a software architectural style that structures an application as a collection of loosely coupled, small, independently deployable services.
 Each service focuses on a specific business function and can be developed, deployed, and scaled independently. This architecture promotes modularity, scalability and resilience.
@@ -169,5 +170,47 @@ Security is a crucial aspect when building microservices, only authorized users 
 1. Vertical Scaling
 2. Horizontal scaling
 
+## Common Challenges and Best Practices:
+1. **Scalability**:
+   **Challenge**: Scaling individual microservices while maintaining overall system performance can be challengin.
+   **Best Practices**: Implement auto-scaling based on real-time metrics. Use **container/orchestrations** platforms like **kubernetes**
+
+2. **Security**:
+   **Challenge**: Ensuring security across multiple microservices and managing authentication and authorization can be complex.
+   **Best Practices**: Implement a zero-trust security model with proper authentication like OAuth 2.0 and authorization like RBAC. Use API gateways for security enforcement. Regularly update and patch dependencies to address security vulnerabilities.
+
+3. **Deployment and DevOps**:
+   **Challenge**: Coordinating deployments and managing the CI/CD pipeline for a large number of microservices can be challenging.
+   **Best Practices**: Implement a robust CI/CD pipeline with automated testing and deployment processes. Use containerization like Docker and container orchestration like Kubernetes for consistency and scalability. Make sure that each microservice is completely independent in terms of deployment.
+
+4. **Versioning and API Management**:
+   **Challenge**: Managing API versions and ensuring backward compatibilty is crucial when multiple services depends on APIs.
+   **Best Practices**: Use versioned APIs and introduce backward-compatible changes whenever possible. Implement API gateways for version management and transformation.
+
+5. **Monitoring and Debugging**:
+   **Challenge**: Debugging and monitoring microservices across a distributed system is difficult. Its much easier to follow the flow of a request in a monolith compared to tracking a request that is handled in a distributed manner.
+
+   **Best Practices**: Implement centralized logging and use distributed tracing tools like **Zipkin** and **Jaeger** for visibility into requests across services. Implement health checks and metrics for monitoring.
+
+## Handling Database Transactions:
+Handling database transactions in a microservices architecture can be complex due to the distributed nature of the system.
+
+Microservices often have their own databases, and ensuring data consistency and maintaining transactional integrity across services requires careful planning and the use of appropirate strategies.
+![image](https://github.com/user-attachments/assets/be82d702-3d2e-4b53-b89c-350aa0614bb2)
+
+**What are Transactions?**
+A **transaction** symbolizes a unit of work performed within a database management system (or similar system) against a database and treadted in a coherent and reliable way independent of other transactions.
+A Transaction generally represents any change in a database.
+
+ACID Transactions:
+Atomocity,
+Consistency
+Isolation
+Durability
+
+![image](https://github.com/user-attachments/assets/f7acebc3-5728-4369-a9f5-2d3fac867226)
 
 
+
+
+![image](https://github.com/user-attachments/assets/6b391aa4-1243-41d6-bdf1-56cd6642bb83)
