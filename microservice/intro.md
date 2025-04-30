@@ -1,6 +1,6 @@
 ## Resource: for monolythic and microservice architecture:
 https://earthly.dev/blog/monorepo-vs-polyrepo/
-
+https://amplication.com/blog/communication-in-a-microservice-architecture
 ## Microservice introduction
 Microservices is a software architectural style that structures an application as a collection of loosely coupled, small, independently deployable services.
 Each service focuses on a specific business function and can be developed, deployed, and scaled independently. This architecture promotes modularity, scalability and resilience.
@@ -117,5 +117,57 @@ Middleware for distributed tracing like **Jaeger** and **Zipkin** helps monitor 
 
 ## Monitoring and Logging:
 Middleware often includes monitoring and logging components like **ELK Stack**, **Prometheus**, and **Grafana** to track the health, performance, and behavior of microservices. This aids in troubleshooting and performance optimization.
+
+
+
+
+
+
+
+
+
+## Microservices + Security
+Security is a crucial aspect when building microservices, only authorized users must have access to your APIs. So, how can you secure your microservices?
+
+1. **Choose an authentication mechanism:** Secure your microservices through token-based authentication (JWT or OAuth2.0), API Keys, or session-based authentication, depending on your applications requirements.
+
+2. **Centralized Authentication Service**: Consider using a centralized authentication service if you have multiple microservices. This allows users to authenticate once and obtain tokens for subsequent requests. If you are using an API Gateway, Authentication and Authorization will usually be centralized there.
+
+3. **Secure Communication**: Ensure that communication b/w microservices and client is encrypted using TLS(usually HTTPS) or other Secure protocols to prevent eavesdropping and data interception.
+
+
+4. **Implement Authenticaion Middleware**: Each microservice should include authentication middleware to validate incoming requests. Verify tokens or credentials and extract user identity.
+
+5. **Token Validation**: For token-based authentication, validate **JWT tokens or OAuth 2.0** tokens using libraries or frameworks that support token validation. Ensure token expiration checks.
+
+6. **User and Role Management**: Implement user and role management within each microservice oo use an external identity provider to manage user identities and permissions.
+
+7. **Role-Based Access Control (RBAC)**: Implement RBAC to define roles and permissions. Assign roles to users and use them to control access to specific microservice endpoints or resources.
+
+8. **Authorization Middleware**: Include authorization middleware in each microservice to enforce access control based on user roles and permissions. This middleware should check whether the authenticated user has the necessary permissions to perform the requested action.
+
+9. **Fine-Grained Access Control**: Consider implementing fine-grained access control to control access to individual resources or data records within a microservice based on user attributes, roles, or ownership.
+
+
+
+## Testing Microservices:
+1. **Unit Testing**: Unit testing individual micrsoervice.
+2. **Integration Testing**: verifying different microservices work together correctly when interacting.
+
+
+
+## Deploying Microservices to a production environment:
+1. Containerization and Orchestration:
+2. Infrasturea as code.
+3. CI/CD.
+4. Environment Configuration
+5. Secret Management.
+6. Monitoring and logging.
+
+
+## Scalling Microservices:
+1. Vertical Scaling
+2. Horizontal scaling
+
 
 
