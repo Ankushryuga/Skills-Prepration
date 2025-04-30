@@ -1,47 +1,47 @@
-1. Elastic Compute Cloud (EC2)
+1. **Elastic Compute Cloud (EC2)**:
 
-2. Elastic Kubernetes Services (EKS)
+2. **Elastic Kubernetes Services (EKS)**:
 
-3. Lambda
+3. **Lambda**:
 
-4. Simple Storage Service (S3)
+4. **Simple Storage Service (S3)**: 
 
-5. Elastic Block Store
+5. **Elastic Block Store**: 
 
-6. Elastic File System
+6. **Elastic File System**: 
 
-7. Virtual Private Cloud
+7. **Virtual Private Cloud**:
 
-8. Route 53
+8. **Route 53**:
 
-9. Elastic Load Balancing
+9. **Elastic Load Balancing**:
 
-10. Web Application Firewall
+10. **Web Application Firewall**:
 
-11. RDS
+11. **RDS**:
 
-12. DynamoDB
+12. **DynamoDB**:
 
-13. Redshift
+13. **Redshift**:
 
-14. Elastic MapReduce
+14. **Elastic MapReduce**:
 
-15. Kinesis
+15. **Kinesis**:
 
-16. SageMaker
+16. **SageMaker**:
 
-17. Glue
+17. **Glue**:
 
-18. EventBridge
+18. **EventBridge**:
 
-19. Simple Queuing Service
+19. **Simple Queuing Service**:
 
-20. Simple Notification Service
+20. **Simple Notification Service**:
 
-21. CloudWatch
+21. **CloudWatch**:
 
-22. CloudFormation
+22. **CloudFormation**:
 
-23. IAM
+23. **IAM**:
 
 24. KMS
