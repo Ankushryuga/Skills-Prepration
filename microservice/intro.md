@@ -2,6 +2,7 @@
 https://earthly.dev/blog/monorepo-vs-polyrepo/
 https://amplication.com/blog/communication-in-a-microservice-architecture
 https://medium.com/nerd-for-tech/transactions-in-distributed-systems-b5ceea869d7d
+https://amplication.com/blog/the-complete-microservices-guide
 ## Microservice introduction
 Microservices is a software architectural style that structures an application as a collection of loosely coupled, small, independently deployable services.
 Each service focuses on a specific business function and can be developed, deployed, and scaled independently. This architecture promotes modularity, scalability and resilience.
