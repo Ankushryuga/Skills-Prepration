@@ -1,3 +1,6 @@
+## Roadmap
+https://roadmap.sh/kubernetes
+
 ## Kubernetes cheat shit
 Kubernetes is an open-source platform for automating deployment, scaling, and operations of application containers across clusters of hosts.
 It Provides a way to manage containers at scale, making it easier to deploy, update, and maintain applications.
