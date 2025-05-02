@@ -53,7 +53,16 @@ It Provides a way to manage containers at scale, making it easier to deploy, upd
 **kubectl autoscale deployment myapp --min=2 --max=5 --cpu-percent=80**        //this enables autoscaling for the "myapp" deployment, with the minimum of 2 replicas and a maximum of 5, scaling based on CPU utilization reaching 80%.
 
 
-
-
-
 These are just some of the basic tasks you can perform with Kubernetes. There are many more advanced features, such as **network policies**, **resource quotas**, and **custom controllers**, that you can explore to enhance your Kubernetes experience.
+
+
+
+## Check How many nodes are part of the cluster:
+**kubectl get nodes**
+
+## Check version of kubernetes:
+**kubectl version**
+
+## What is the flavor and version of OS on which the kubertes nodes are running?
+**kubectl get nodes -o wide**
+
