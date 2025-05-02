@@ -61,6 +61,10 @@ Understanding data within containers:
 
 **docker ps -a**  //to list all containers.
 
+
+### WORKING WITH 3rd PARTY CONTAINER:::
+Advantage: without installing anything additional, we can use 3rd party container.
+
 ## To start docker container:
 **docker start my-ubuntu-container=container**: Restart the container
 **docker attach my-ubuntu-container**: to attach the shell inside that container.
@@ -69,7 +73,29 @@ Understanding data within containers:
 
 **docker build --tag my-ubuntu-image -<<EOF FROM ubuntu:22.04 RUN apt update && apt install iputils-ping --yes EOF**
 
+## Data Produced at Runtime Practice:
+**docker run -it --rm ubuntu:22.04**  //short version of **docker run --interactive --tty --rm ubuntu:22.04**
 
+=> mkdir my-data
+=> echo "Hello from the contianer!" > /my-data/hello.txt
+=> cat my-data/hello.txt
+**NOTE**: now if exit or stop then all these changes will be gone.
+
+## To avoid this we can use first option is to **volume**.
+**docker volume create my-volume**: 
+
+## Now we can mount the volume into that file system 
+**docker run -it --rm --mount source=my-volume, destination=/my-data/ ubuntu:22.04**
+Now if exited my-data will be available in my-volume.
+
+## To check where this file is located?
+**docker run -it --rm --privileged --pid=host justincormack/nsenter1@sha256:5af0be5e42ebd55eea2c593e4622f810065c3f45bb805eaacf43f08f3d06ffd8**
+
+**cd my-volume**
+
+## Second option is to use bind option
+
+**docker run -it --rm --mount type=bind, source="${PWD}"/my-data, destination=/my-data ubuntu:22.04**
 
 
 
