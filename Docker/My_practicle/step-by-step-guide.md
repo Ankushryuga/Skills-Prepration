@@ -1,5 +1,5 @@
 ## Pull a image from.
-
+## I m using Colima=> to start Colima::::::    Colima start
 1. docker pull postgres:latest
 
 ## Set up custom conainer with port binding and bind mounts (its not neccessary to add all the command in one big command i added for practice)
@@ -103,7 +103,7 @@ docker run -d \
 -p 4000:4000 \
 -e SPRING_DATASOURCE_URL=jdbc:postgresql://patient-service-db:5432/db \
 -e SPRING_DATASOURCE_USERNAME=postgres \
--e SPRING_DATASOURCE_PASSWORD=1234 \
+-e SPRING_DATASOURCE_PASSWORD=password \
 -e SPRING_JPA_HIBERNATE_DDL_AUTO=update \
 -e SPRING_SQL_INIT_MODE=always \
 patient-service:latest
