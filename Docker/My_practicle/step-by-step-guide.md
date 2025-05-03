@@ -99,8 +99,14 @@ else some error in that use the following command to remove those errors.
 ## to run the container:
 docker run -d \
 --name patient-service \
+--network patient-net \
 -p 4000:4000 \
-patient-service:latest
+-e SPRING_DATASOURCE_URL=jdbc:postgresql://patient-service-db:5432/db \
+-e SPRING_DATASOURCE_USERNAME=postgres \
+-e SPRING_DATASOURCE_PASSWORD=password \
+-e SPRING_JPA_HIBERNATE_DDL_AUTO=update \
+-e SPRING_SQL_INIT_MODE=always \
+patient-service:latest \
 
 
 
