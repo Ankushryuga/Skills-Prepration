@@ -9,7 +9,7 @@
 > -p 5000:5432 \                                                                                              # binding host_port(5000) to Container_port(5432)
 > -v /Users/ankushraj/Docker_Mount_Data/patient-service-db:/var/lib/postgres/data \                           # Mounting container data to host system so that data stays
 > -e POSTGRES_USER=postgres \                                                                                 # Setting up enviornment variables
-> -e POSTGRES_PASSWORD=password \                                                                             # Setting up enviornment variables
+> -e POSTGRES_PASSWORD=1234 \                                                                             # Setting up enviornment variables
 > -e POSTGRES_DB=db \                                                                                         # Setting up enviornment variables
 > postgres:latest                                                                                             # Specifying Docker image.
 
@@ -28,7 +28,7 @@ docker run -d \
 -p 5000:5432 \
 -v /Users/ankushraj/Docker_Mount_Data/patient-service-db:/var/lib/postgres/data \
 -e POSTGRES_USER=postgres \
--e POSTGRES_PASSWORD=password \
+-e POSTGRES_PASSWORD=1234 \
 -e POSTGRES_DB=db \
 
 
@@ -103,10 +103,10 @@ docker run -d \
 -p 4000:4000 \
 -e SPRING_DATASOURCE_URL=jdbc:postgresql://patient-service-db:5432/db \
 -e SPRING_DATASOURCE_USERNAME=postgres \
--e SPRING_DATASOURCE_PASSWORD=password \
+-e SPRING_DATASOURCE_PASSWORD=1234 \
 -e SPRING_JPA_HIBERNATE_DDL_AUTO=update \
 -e SPRING_SQL_INIT_MODE=always \
-patient-service:latest \
+patient-service:latest
 
 
 
