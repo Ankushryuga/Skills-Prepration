@@ -1,5 +1,6 @@
 **Kafka Broker** : its essentially a server that store and deliver messages to consumers. it runs the kafka and manages all the topics.
 
+PORT: 9092 kafka exposes internal port.
 
 Inside kafka broker: there are **Kafka Topic**, and kafka topics are categorized channels where messages stored and exchange, basically kafka topic is used to hold events that matches certain categories.
 and event are single piece of message or data that stored on kafka topic and sent from **Kafka Producer**, and event are specifically stored in JSON or protobuf.
