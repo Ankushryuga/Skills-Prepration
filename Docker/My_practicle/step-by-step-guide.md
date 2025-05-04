@@ -111,3 +111,33 @@ patient-service:latest
 
 
 
+## additional environement variable:
+
+## BILLING SERVICE CONTAINER:
+
+docker run -d \         
+--name billing-service \
+--network patient-net \
+-p 4001:4001 \
+-p 9001:9001 \
+
+
+## PATIENT SERVICE CONTAINER:
+
+docker run -d \
+--name patient-service \
+--network patient-net \
+-p 4000:4000 \
+-e SPRING_DATASOURCE_URL=jdbc:postgresql://patient-service-db:5432/db \
+-e SPRING_DATASOURCE_USERNAME=postgres \
+-e SPRING_DATASOURCE_PASSWORD=password \
+-e SPRING_JPA_HIBERNATE_DDL_AUTO=update \
+-e SPRING_SQL_INIT_MODE=always \
+-e BILLING_SERVICE_ADDRESS=billing-service \
+-e BILLING_SERVICE_GRPC_PORT=9001 \
+patient-service:latest
+
+
+
+
+
