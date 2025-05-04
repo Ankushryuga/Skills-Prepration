@@ -1,4 +1,4 @@
-**Kafka Broker** : its essentially a server that store and deliver messages to consumers.
+**Kafka Broker** : its essentially a server that store and deliver messages to consumers. it runs the kafka and manages all the topics.
 
 
 Inside kafka broker: there are **Kafka Topic**, and kafka topics are categorized channels where messages stored and exchange, basically kafka topic is used to hold events that matches certain categories.
