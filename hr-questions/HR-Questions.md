@@ -6,3 +6,6 @@ Science, after that i had done internships at coding ninja and startup Blutrain,
 I love challenges and equally relish the continuous learning of new technologies, which makes this opportunity quite exicting for me, i can only imagine the work your company is doing in relation to the industry or field,
 which is really innovative, and i'd love to chip in my skills and experience to help the team achieve the goals.
 
+## 2. What are your salary expectations?
+Given my experience and expertise in Full Stack Development, I'm looking to make between $X and $Y in my next role. I know i'd be a valuable asset to your team and am open to learning more about your budget for the role and the other benefits that you offer employees.
+
