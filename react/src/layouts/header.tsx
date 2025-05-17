@@ -47,8 +47,8 @@ import { Menu, X } from "lucide-react";
 const navigationItems: { label: string; path: string }[] = [
   { label: "Home", path: "/" },
   { label: "About me", path: "/aboutme" },
-  { label: "My Projects", path: "/myprojects" },
-  { label: "My Experiences", path: "/myexperiences" },
+  // { label: "My Experience", path: "/myprojectsex" },
+  { label: "My Experience", path: "/myexperience" },
 ];
 
 const Header: React.FC = () => {

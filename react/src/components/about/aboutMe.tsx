@@ -36,6 +36,7 @@
 
 // export default AboutMe;
 
+
 import React from "react";
 
 const AboutMe: React.FC = () => {
@@ -80,3 +81,4 @@ const AboutMe: React.FC = () => {
 };
 
 export default AboutMe;
+

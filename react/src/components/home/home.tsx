@@ -10,7 +10,7 @@ const Home: React.FC = () => {
   const navigate=useNavigate();
 
   return (
-    <div className="px-4 sm:px-10 text-gray-800">
+    <div className="px-4 sm:px-10 text-gray-800 pt-40">
       <p className="text-2xl font-bold">
         <span role="img" aria-label="waving-hand">👋</span> Hi, I'm
       </p>
