@@ -41,7 +41,7 @@ import React from "react";
 
 const AboutMe: React.FC = () => {
   return (
-    <div className="px-4 sm:px-10 py-16 text-gray-800 max-w-4xl mx-auto animate-fade-in">
+    <div className="pt-30 px-4 sm:px-10 py-16 text-gray-800 max-w-4xl mx-auto animate-fade-in">
       <h1 className="text-4xl font-bold mb-8 text-purple-800 text-center">
         👨‍💻 About Me
       </h1>
