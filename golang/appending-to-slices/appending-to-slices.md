@@ -15,5 +15,7 @@ func append(s1 []int, vals ...int) []int {
   }
 }
 
+
+## NOTE:
 Go has no mechanism for defining generic functions, but a few generic functions are provided as built-ins. The built-in append() is generic: it takes slice of any type and returns the slice type passed to it, e.g. passing a slice of bytes to append() returns a slie of bytes.
 
