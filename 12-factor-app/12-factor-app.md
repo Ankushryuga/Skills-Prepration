@@ -20,5 +20,7 @@ The 12-factor application is a methodology for creating SaaS applications that:
 8. **Parallelism**: Scale your application with processes.
 9. **Disposability**: Maximize reliability with fast startup and graceful shutdown.
 10. **Application Development / Operation Parity**: Keep development, staging, and production enviroment as similar as possible.
+    ![image](https://github.com/user-attachments/assets/e7c71026-6914-4b9f-8415-9147906bd58d)
+
 11. **Logging**: Think of the log as stream of events.
 12. **Tasks of Administration**: Perform administrative/managementtasks using one-time processes.
