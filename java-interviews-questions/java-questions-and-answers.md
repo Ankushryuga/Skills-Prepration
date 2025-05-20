@@ -72,8 +72,50 @@
 14. How does a JIT compiler differ from a standard compiler?
     => JIT can access dynamic runtime information, and a standard compiler does not. Therefore, JIT can better optimize frequently used inlining functinos.
 
-    
+15. What is an inner class?
+    => An inner class is a class that is nested within another class. An inner class has access rights for the class that is nesting it, and it can access all variables and methods defined in the outer class.
 
+16. What is a subclass?
+    => A subclass is a class that inherits from another class called the superclass. Subclass can access all public and protected methods and fields of its superclass.
+
+17. What is a package in java?
+    => In java, packages are the collection of related classes and interfaces which bundle together.
+
+18. How can developers use packages in Java?
+    => Packages in java allow developers to modularize the code and optimize its reuse easily. In addition, developers can use other classes to import and reuse the code within the packages.
+
+19. What are the advantages of packages in Java?
+    => 1. Packages help developers avoid name clashes.
+       2. Packages provide easier access control.
+       3. Packages can also contain hidden classes that are not visible to the outer classes and are only used within the package.
+       4. Packages create a standardized hierarchical structure, making it easier to locate related classes.
+
+## Java class, variable, objects, and argument questions.
+    
+20. What is a class in Java?
+    => All java codes are defined in a class, it has variables and methods.
+
+21. What is a variable within Java?
+    => variables are attributes that define the state of a class.
+
+22. How do you use a method in java?
+    => Methods are the place where the exact business logic has to be done. Methods contain a set of statements or instructions that satisfy specified requirements.
+    
+23. What is a Java Object?
+    => An object is an instance of a class. The object has a state and behavior.
+
+24. What is a singleton class, and how can it be used?
+    => A singleton class in java can have only one instance. Therefore, all its methods and variables belong to this instance. The singleton class concept is useful when the developer needs to limit the number of objects for a class.
+
+25. What is a constructor in java?
+    => The sole purpose of using Constructors in java is to create an instance of a class. Creating an object of a class will invoke them. Some key features of java constructors include:
+    a. Constructors can be public, private, or protected.
+    b. If a class already defines a Constructors with arguments, you can no longer use a default no-argument constructor - you have to write one.
+    c. Instantiating a class will only call them once.
+    d. They must have the same name as the class itself.
+    e. They do not return a value, and you do not have to specify the keyword void.
+    f. If you do not create a constructor for the class, java helps you by using a so-called default no-argument Constructor.
+    
 
 
 
