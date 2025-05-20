@@ -51,8 +51,8 @@
 
 # Code.
 
-   @Component
-   public class MyCustomHealthIndicator extends AbstractHealthIndicator{
+@Component
+public class MyCustomHealthIndicator extends AbstractHealthIndicator{
       @Override
       protected void doHealthCheck(Health.Builder Builder) throws Exception {
          boolean isHealthy = checkDatabaseConnection();
@@ -62,7 +62,7 @@
             builder.down().withDetail("Database", "Not Available");
          }
       }
-   }
+}
    
 ==> Custom health indicators help ensure that all critical depndencies are monitored, improving the system's reliability.
 
@@ -72,4 +72,7 @@
 
    1. Spring Cloud Eureka: Enable **@EnableEurekaClient** to register services with Eureka, making it easy to discover and interact with microservices dynamically.
    2. Load Balancing: Use Spring Cloud Load Balancer or Ribbon for client-side load balancing.
-   
+
+   => With service discovery in place, the system can dynamically handle changes in service availability without requiring manual configuration updates.
+
+6. 
