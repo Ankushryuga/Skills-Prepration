@@ -75,4 +75,10 @@ public class MyCustomHealthIndicator extends AbstractHealthIndicator{
 
    => With service discovery in place, the system can dynamically handle changes in service availability without requiring manual configuration updates.
 
-6. 
+6. What is Spring Boot's **@Retryable** annotation, and how do you fine-tune it for microservices reliability.
+   => The @Retryable annotation in Spring Boot allows retrying a method call in case of failure. This is essential for improving the reliability of services that might experience transient failures(e.g Network timeouts or database issues)
+
+   @Retryable(value={IOException.class}, maxAttemps=5, backoff=@Backoff(delay=2000))
+   public String fetchData(){
+
+   }
