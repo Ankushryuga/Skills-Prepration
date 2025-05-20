@@ -217,6 +217,48 @@
     b. **A Checked exception**: inherits from **exception class**. The client code has to handle the checked exceptions either in a try-catch clause or has to be thrown for the super-class to catch the same. A checked exception throw by a lower class (sub-class) enforces a contract on the invoking class (super-class) to catch or throw it.
     c. **Errors**(members of the error family) ususally appear for more serious problems, such as **OutOfMemoryError(OOM)**, that may not be so easy to handle.
 
+46. **What is the entry point in Java, and how is it written?**
+    =>
+    a. main() in java is the entry point for any java program.
+    b. main() is always written as public static void main(string args).
 
-   
-    
+47. **In Java, what are public static void main string args?**:
+    => public static void main string args, also known ar public static void main(String[] args), means:
+    a. **Public** is an access modifier used to specify who can access this method. Also, this method is accessible by any class.
+    b. **Static** is a keyword in java that identifies when it is class-based. main() is made static in java to access it without creating the instance of a class. If main is not made static, the compiler will throw an error as main() is called by the JVM before creating any objects. It can only invoke static methods directly via the class.
+    c. **void** is the return type of the method that defines the method. That method does not return a value.
+    d. **Main** is the name of the method searched by JVM as a starting point for an appplication (with a particular signature only). It is also the method where the main execution occurs.
+    e. **String args[]** is the parameter that passes to the main method.
+
+
+48. **What's the purpose of static methods and static variables?**
+   =>
+   Static keyword to make a method or variable shared for all objects when there is a requirement to share a method or a variable multiple objects of a class. This is used instead of creating separate copies for each object.
+
+
+49. **How do you use, call, and access a static method in java?**
+    =>
+    1. You must use the static keyword before the method name.
+    2. Call a static method using the class (className.methodName).
+    3. Static methods cannot access any non-static instance variables or methods.
+
+
+50. **How do you use, call, and access a non-static method in java?**
+    =>
+    1. You do not need to use the static keyword before the method name.
+    2. Call a non-static method like any general method.
+    3. Non-static methods can access any static method or static variables without creating an instance of the class.
+
+
+51. **What are this() and super(), and where are you required to use them?**
+    =>
+    In java, super() and this() are special keywords used to call the constructor. When using this() and super(), they must be the first line of a block.
+
+
+52. **What does this() represent, and how is it used in java?**
+    => this() represents the current instance of a class.
+    => used to:
+       1. Call the defult constructor of the same class.
+       2. Access methods of the current class.
+       3. Point to the current class instance.
+
