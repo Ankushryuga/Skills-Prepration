@@ -62,3 +62,85 @@ j. **Sidecar Pattern**: The sidecar pattern deploys helper components (Sidecars)
   
 
 
+
+
+1. 
+############# API GATEWAY PATTERN #############
+#. Tech Stack: Spring Cloud Gateway + Eureka (Service Discovery).
+# Explanations: A central gateway handles requests and routes them to proper services.
+Example:
+**application.yml** For API Gateway.
+=> 
+spring:
+   cloud:
+      gateway:
+         routes:
+            - id: user-service
+               uri: lb://USER-SERVICE
+               predicates:
+                  - Path=/users/**
+            - id: order-service
+               uri: lb://ORDER-SERVICE
+               predicates:
+                  - Path=/orders/**
+
+
+## Gateway Main Class.
+@SpringBootApplication
+@EnableDiscoveryClient
+public class ApiGatewayApplication {
+   public static void main(String[] args){
+      SpringApplication.run(ApiGatewayApplication.class, args);
+   }
+}
+   
+# End.
+
+2. 
+############# SERVICE DISCOVERY #############
+# Tech Stack: Eureka Server + Eureka Client.
+@SpringBootApplication
+@EnableEurekaServer
+public class EurekaServerApplication{
+   public static void main(String[] args){
+      SpringApplication.run(EurekaServerApplciation.class, args);
+   }
+}
+
+
+**application.yml** for service discovery.
+=> 
+server:
+   port: 8761
+
+eureka:
+   client:
+      register-with-eureka: false
+      fetch-registry: false
+
+
+# End.
+
+3. ############# DATABASE PER SERVICE PATTERN. #############
+# Each service has its own DB and schema.
+==> UserService - User Entity + Repo.
+@Entity
+public class User {
+   @Id @GeneretedValue
+   private Long id;
+   private String name;
+}
+@Repository
+public interface UserRepository extends JPARepository<User, Long>{}
+
+==> OrderService -> order entity + Repo.
+@Entity
+public class Order {
+    @Id @GeneratedValue
+    private Long id;
+    private Long userId;
+    private String product;
+}
+@Repository
+public interface OrderRepository extends JpaRepository<Order, Long> {}
+
