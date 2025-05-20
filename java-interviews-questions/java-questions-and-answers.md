@@ -261,4 +261,180 @@
        1. Call the defult constructor of the same class.
        2. Access methods of the current class.
        3. Point to the current class instance.
+################################################################################################
+:❣️ 53. **Stream In Java:**
+    => stream API, is used to process collections of objects. A stream in java is a sequence of objects that supports various methods that can be pipelined to produce the desired result.
+## use of stream in java:
+==> 
+      1. Stream API is a way to express and process collections of objects.
+      2. Enable us to perform operations like **filtering, mapping, reducing, and sorting**.
+
+## How to create a java stream?
+=> Java stream creation is one of the most basic steps before considering the functionalities of java stream.
+**Syntax**:
+   Stream<T> stream;      // T is either a class, object, or data type depending upon the declaration.
+
+**Java Stream Features**:
+1. A stream is not a data structure; instead, it takes input from the collections, Arrays, or I/O channels.
+2. Streams don't change the original data structure, they only provide the result as per the pipelined methods.
+3. Each intermediate operation is lazily executed and returns a stream as a result, hence, various intermediate operations can be pipelined. Terminal operations mark the end of the stream and return the result.
+
+**Different Operations on Streams**: there are 2 types of operations in streams
+1. Intermediate Operations.
+2. Terminal Operations.
+
+
+:❣️
+###### Intermediate Operations:   #######
+![image](https://github.com/user-attachments/assets/c6dcd3e8-d072-4032-8747-fe8e2e652dce)
+
+Intermediate operations are the types of operations in which multiple methods are chained in a row.
+# Characteristics of Intermediate Operations:
+1. Methods are chained together.
+2. Intermediate operations transform a stream into another stream.
+3. It enables the concept of filtering where one method filters data and passes it to another method after processing.
+
+◼️
+## Benefit of Java Stream:
+1. No Storage
+2. Pipleline of Functions.
+3. Laziness.
+4. Can be infinite.
+5. Can be parallelized.
+6. Can be created from Collections, array, Files Lines, Methods in Stream.
+
+◼️
+## Important Intermediate Operations:
+1. map(): The map method is used to return a stream consisting of the results of applying the given function to the elements of this stream.
+
+**Syntax**:
+<R> Stream<R> map(Function<?super T, ? extends R> mapper)
+
+2. filter(): The filter method is used to select elements as per the Predicate passed as an argument.
+
+**Syntax**:
+Stream<T> filter(Predicate<?super T> predicate)
+
+3. sorted(): The sorted method is used to sort the stream.
+
+**Syntax**: 
+Stream<T> sorted()
+Stream<T> sorted(Comparator<? super T> comparator)
+
+4. flatMap(): The flatMap operation in Java streams is used to flatten a stream of collections into a single stream of elements.
+
+**Syntax**:
+<R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper).
+
+5. distinct(): Removes duplicate elements. It returns a stream consisting of the distinct elements (according to Object.equals(Object)).
+
+**Syntax**:
+Stream<T> distinct()
+
+6. peek(): Performs an action on each element without modifying the stream. It returns a stream consisting of the elements of this stream, additionally performing the provided action on each element as elements are consumed from the resulting stream.
+
+**Syntax**:
+Stream<T> peek(Consumer<? super T> action)
+
+
+###### Example on Streams:
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
+
+public class StreamIntermediateOperationsExample {
+   public static void main(String[] args){
+      //List of list of names.
+      List<List<String>> listOfLists=Arrays.asList(
+      Arrays.asList("Reflextion", "Collection", "Stream"),
+      Arrays.asList("Structre", "State", "FLow"),
+      Arrays.asList("sorting", "flating", "sls")
+      );
+      Set<String> intermediateResults=new HashSet<>();
+      // stream pipleline demonstrating various intermediate..
+      List<String> result=listOfLists.stream().flatMap(List::stream)      //Flatten the list of lists into a single stream.
+      .filter(s->s.startsWith("S))      //Filter elements starting with "S".
+      .map(String::toUpperCase)         // Transform each element to uppercase.
+      .distinct()                       //remove duplicate.
+      .sorted()                         //sort elements.
+      .peek(s->intermediateResults.add(s))      //perform an action (add to set) on each element.
+      .collect(Collectors.toList());      //collect the final result into a list.
+
+      System.out.println("Intermediate Results");
+      intermediateResults.forEach(System.out::println);
+
+      //final result
+      System.out.println("Final Result:");
+      result.forEach(System.out::println);
+   }
+}
+
+
+
+
+
+:❣️
+###### Terminal Operations:   #######
+=> Terminal operations are the type of operations that return the result. These Operations are not processed further just return a final result value.
+
+# Important Terminal Operations:
+1. collect(): The collect method is used to return the result of the intermediate operations performed on the stream.
+**Syntax**:
+<R, A> R collect(Collector<? super T, A, R> collector)
+
+2. forEach(): The forEach method is used to iterate through every element of the stream.
+**Syntax**:
+void forEach(Consumer<? super T> action)
+
+3. reduce(): The reduce method is used to reduce the elements of a stream to a single value. The reduce method takes a **BinaryOperator** as a parameter.
+**Syntax**:
+T reduce(T identity, BinaryOperator<T> accumulator)
+Optional<T> reduce(BinaryOperator<T> accumulator)
+
+4. count(): Returns the count of the elements in the stream.
+**Syntax**:
+long count()
+
+5. findFirst(): Returns the first element of the stream, if present.
+**Syntax**:
+Optional<T> findFirst()
+
+6. allMatch(): Checks if all elements of the stream match a given predicate.
+**Syntax**:
+boolean allMatch(Predicate<? super T> predicate)
+
+7. anyMatch(): Check if any element of the stream matches a given predicate.
+**Syntax**:
+boolean anyMatch(Predicate<? super T> predicate)
+
+🚩
+**Note**:::::::::::::::::::::::::::::
+Intermediate Operations are running based on the concept of Lazy Evaluation, which ensures that every method returns a fixed value (Terminal Operation) before moving to the next round.
+
+## Terminal Operations Example:
+import java.util.*;
+import java.util.stream.Collectors;
+
+public class StreamTerminalOperations{
+   public static void main(String[] args){
+      List<String> names=Arrays.asList(
+      "Reflect", "Collections","Hello"
+      );
+      names.stream().forEach(System.out::println);
+      //Collect: Collect names starting with 'S' into a list.
+      List<String> sNames=names.stream().filter(name -> name.startsWith("S")).collect(Collectors.toList());            //Collect names.
+
+      String concatenateNames=names.stream().reduce("", (partialString, element) -> partialString + " " + element);         //reduced names.
+
+   Optional<String> firstName=names.stream().findFirst();      //Findthe first name.
+      
+   }
+}
+
+
+
+
+
 
