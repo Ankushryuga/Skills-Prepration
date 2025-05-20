@@ -116,7 +116,107 @@
     e. They do not return a value, and you do not have to specify the keyword void.
     f. If you do not create a constructor for the class, java helps you by using a so-called default no-argument Constructor.
     
+26. What does the term Constructor overloading mean?
+    => Constructor overloading indicates passing different numbers and type of variables as arguments, all of which are private variables of the class.
+
+27. How are non-primitive variables used in java?
+    => Non-primitive variables always refer to objects in java.
+
+28. In Java, what is a static variable?
+    => A static variable is associated with a class and not objects of that class.
+
+29. What are java data types, and how are they grouped?
+    => In java, a variable must be specified data type such as an integer, floating-point number, character Boolean, or string. The 2 groups of data types are:
+    1. **Primitive Data Types**: which include byte, short, int, long, float, double, boolean, and char.
+    2. **Non-Primitive Data Types**: Which include String, arrays, and classes.
+   
+30. How do you define primitve data types and describe each by size and description?
+    a. byte is 1 byte in size. It stores whole numbers from -128 to 127.
+    b. short is 2 byte in size. It stores whole numbers from -32,768 to 32,767.
+    c. int is 4 bytes in size. It stores whole numbers from -2,147,483,648 to 2,147,483,647.
+    d. long is 8 bytes in size.
+    e. float is 4 bytes in size.
+    f. double is 8 bytes in size.
+    g. char is 2 bytes in size.
+
+31. What do the terms autoboxing and unboxing mean in java?
+    a. **Autoboxing** represents the java compiler that automatically transforms primitve data types into object equivalents or wrapper types to ease compilation.
+    b. **Unboxing** is the automatic transformation of wrapper types into their primitive equivalent.
+
+32. What are wrapper classes in Java?
+    a. Every primitive data type has a class dedicated to it, known as wraper classes.
+    b. we call them wrapper classes b/c they "wrap" the primitive data type into an object of that class.
+    c. Wrapper classes convert the java primitives into reference types (objects).
 
 
+33. What are the differences b/w Methods and constructors?
+    =>
+    **Methods**:
+    a. Used to represent the behavior of an object.
+    b. Must have a return type.
+    c. Needs to be invoked explicitly.
+    d. The compiler does not provide a default method.                             
+    e. Method name may or may not be the same as class name.
+
+    **Constructors**:
+    a. Used to initialize the state of an object.
+    b. Does not have a return type.
+    c. Invoked implicitly.
+    d. The compiler provides a default constructor if the class has none.
+    e. Constructor name must always be the same as the class name.
+
+34. Can you override a private method or static method in Java?
+    => You cannot override a private or static method in Java. You cannot override a private method in subclass because it's not accessible there.
+
+35. What is method hiding?
+    => Method hiding is an alternative to overriding a private or static method, which occurs when you hide the superclass method, you create a similar method with the same return type and same method arguments in child class. For example, you can create another private method with the same name in the child class.
+
+36. What is the difference b/w **equals() and ==** in Java?    
+   =>
+      a. **Equals()** method:
+             1. Is defined in object class in java.
+             2. Used for checking the equality of 2 objects defined by business logic.
+      b. **==** (equality operator):
+             1. A binary operator provided by Java programming language and used to compare primitives and objects.
+             2. public boolean equals(object o) is the method provided by the Object class.
+             3. Default uses == operator to compare 2 objects. For example, you can override a method like string class. equals() method is used to compare the values of 2 objects.
+
+37. Can you write multiple catch blocks under a single try block?
+   => Yes, you can have multiple catch blocks under a single try block, your approach should be from specific to general.
+
+38. What is a local variable?
+    => Local variables are defined in the method and scope of the variables that exist inside the method itself.
+
+39. What is an instance variable?
+    => An instance variable is defined inside the class and outside the method. The scope of the variables exists throughout the class.
+
+40. How do you use final keywords and final variables in java?
+    =>
+    1. final keywords with a variable of primitive data types, they cannot change the variable's value.
+    2. When you use final with non-primitive variables, you cannot change the members of that referred object.
+
+41. What is inheritance in Java?
+    => Inhertitance in java is the concept where the properties of one class can be inherited by the other. It helps to reuse the code and establish a relationship b/w different classes.
+
+42. In Java, what types of classes perform inheritance?
+    => Parent and Child class.
+
+43. What types of inheritance does java support?
+    =>
+    a. Single Inheritance.
+    b. Multiple Inheritance
+    c. Hierarchical inheritance.
+    d. Hybrid Inheritance.
+
+44. What is Java exception handling?
+    => In java, exceptions are object. When you throw an exception, you throw an object. However, you can't throw just any object as an exception - only those objects whose classes **descend from throwable**. **Throwable** serves as the base class for an entire family of classes, declared in **java.long**, that your program can instantiate and throw.
+
+45. What are the differences b/w unchecked exception, checked exception, and errors?
+    =>
+    a. **An unchecked exception**: inherits from **RuntimeException** (which extends from exception). The JVM treats RuntimeException differently as there is no requirement for the application code to deal with them explicitly.
+    b. **A Checked exception**: inherits from **exception class**. The client code has to handle the checked exceptions either in a try-catch clause or has to be thrown for the super-class to catch the same. A checked exception throw by a lower class (sub-class) enforces a contract on the invoking class (super-class) to catch or throw it.
+    c. **Errors**(members of the error family) ususally appear for more serious problems, such as **OutOfMemoryError(OOM)**, that may not be so easy to handle.
 
 
+   
+    
