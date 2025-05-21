@@ -144,3 +144,88 @@ public class Order {
 @Repository
 public interface OrderRepository extends JpaRepository<Order, Long> {}
 
+
+# End.
+
+
+
+4. ############# Circuit Breaker Pattern: #############
+   =>
+   Tech Stack=>  Resilience4j
+
+   //Calling another service with a fallback.
+   @CircuitBreaker(name="orderService", fallbackMethod="fallbackOrder")
+   public Order getOrder(Long userId){
+      return restTemplate.getForObject("http://ORDER-SERVICE/orders/user/" + userId, Order.class);
+   }
+   
+   public Order fallbackOrder(Long userId, Throwable t){
+      return new Order(OL, userId, "Fallback Order");
+   }
+
+## application.yml.
+resilience4j.circuitbreaker.instances.orderService:
+   registerHealthIndicator: true
+   slidingWindowSize: 5
+   failureRateThreshold: 50
+
+
+
+5. ############# Saga Pattern (Choreography style). #############
+   => Use events to coordinate actions b/w microservies.
+
+   Order Service - Send Event.
+   public void placeOrder(Order order){
+      orderRepository.save(order);
+      kafkaTemplate.send("order-created", order);
+   }
+
+   Inventory Service - listen and reduce stock.
+   @KafkaListener(topics = "order-created")
+   public void reduceStock(Order order){
+      inventoryService.reduce(order.getProductId(), order.getQuantity());
+   }
+
+
+
+6. ############# Centralized Logging & Tracing: #############
+   => Tech stack: Sleuth + Zipkin.
+   <dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-sleuth</artifactId>
+</dependency>
+<dependency>
+    <groupId>org.springframework.cloud</groupId>
+    <artifactId>spring-cloud-starter-zipkin</artifactId>
+</dependency>
+
+
+=> application.yml
+spring:
+   zipkin:
+      base-url: http://localhost:6533
+   sleuth:
+      sampler:
+         probability: 1.0
+
+
+# End.
+
+
+7. ############# Security With OAuth2 + JWT. #############
+   #Tech Stack: Keyclock + Spring Security
+   # Resource Server Config
+
+   @EnableWebSecurity
+   public class SecurityConfig extends WebSecurityConfigurerAdapter{
+      @Override
+      protected void configure(HttpSecurity http) throws Exception {
+         http
+         .authorizeRequest()
+         .antMatchers("/orders/**").hasRole("User")
+         .anyRequest().authenticated()
+         .and()
+         .oauth2ResourceServer().jwt();
+      }
+   }
+   
