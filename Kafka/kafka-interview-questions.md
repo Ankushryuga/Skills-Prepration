@@ -1,8 +1,10 @@
 # 1. What is apache kafka?
-   => its a distributed streaming platform that allows for publishing. subscribing to, storing, and processing streams of records in real-time, its designed to handle high-throughput, fault-tolerant, and scalable data pipelines.
+    => its a distributed streaming platform that allows for publishing. subscribing to, storing, and processing streams of records in real-time, its designed to handle high-throughput, fault-tolerant, and scalable data pipelines.
+
+    Note: Kafka runs on port: 9092
 
 # 2. Key components of Kafka?
-   => a. **Poducer**:    Publishes messages to kafka topics.
+    => a. **Poducer**:    Publishes messages to kafka topics.
       b. **Consumer**:   Subscribes to topics and processes the published messages.
       c. **Broker**:     A kafka server that stores and manages topics.
       d. **ZooKeeper**:  Manages and coordinates kafka brokers.
