@@ -1,22 +1,37 @@
 ## 1. Tell me about yourself?
-=> Thank you for asking, I would describe myself as a collaborative and solution-driven software engineer with over 3+ year experience working as developers, and programmers holding a degree in Computer sceience from Chandigarh university.
+    => Thank you for asking, I would describe myself as collaborative and solution-driven software enginner with over 3 years of experience. I hold a degree in Computer Science from Chandigarh University.
+    
+    I've contributed to more than dozen projects and assisted with managing 3-4 projects- something i truly enjoy. I have a passion for solving complex problems and continuously strive to learn and grow.
+    
+    Over the past years, I've worked on several project teams using technologies such as Java, Spring Boot, Microservices, gRPC, Kafka, MySQL, PostgreSQL, MariaDB, NodeJS, React, Python Tensorflow, Docker, Kubernetes etc.
+    
+    I'm excited to collaborate with a team and apply my technical skills to build robust applications and systems.  along with contributing to your team in way that +vely impacts the orginzation and your clients.
 
-I've already contributed to over more than dozen projects and assisted with managing 3-4 projects.
-Something i've enjoyed and has been able to use in my current role in leveraging my experience in tech support to help identify and resolve complex problems.
-
-And Over the last couple years, I worked on several project teams using Java, Spring Boot, microservices, gRPC, Kafka, React, MySQL, PostgreSQL, MariaDB and MongoDB, NodeJS, python Tensorflow, Docker, Kubernetes etc, I always thrive to learn something new.
-
-I'm excited to collaborate on a team and apply my technical skills to develop applications and system along with contributing to your team in way that +vely impacts the originzation and your clients.
-
-
-
+    
 
 
 
 
 
 
-## 1.1. Tell me about yourself?
+## 1.1 Tell me about yourself?
+    => Thank you for asking, I would describe myself as a collaborative and solution-driven software engineer with over 3+ year experience working as developers, and programmers holding a degree in Computer sceience from Chandigarh university.
+    
+    I've already contributed to over more than dozen projects and assisted with managing 3-4 projects. Something i've enjoyed and has been able to use in my current role in leveraging my experience in tech support to help identify and resolve complex problems. 
+    
+    And Over the last couple years, I worked on several project teams using Java, Spring Boot, microservices, gRPC, Kafka, React, MySQL, PostgreSQL, MariaDB and MongoDB, NodeJS, python Tensorflow, Docker, Kubernetes etc, I always thrive to learn something new.
+    
+    I'm excited to collaborate on a team and apply my technical skills to develop applications and system along with contributing to your team in way that +vely impacts the originzation and your clients.
+
+
+
+
+
+
+
+
+
+## 1.2. Tell me about yourself?
 I am a software engineer with experience in full-stack development with 3+  year of experience using Java with spring boot, React, MySQL, PostgreSQL, MariaDB, MongoDB, gRPC, REST API, Node.js. My projects range 
 from small to large scalable, robust, web applications, what's specially important for me is solving problems in a manner that is useful for people in the process. I have graduated with higher education in Computer
 Science, after that i had done internships at coding ninja and startup Blutrain, while working for those companies, which helped me get stronger in problem-solving abilities and be attentive to details. 
