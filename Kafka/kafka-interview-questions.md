@@ -42,7 +42,7 @@
     => The offset is a unique identifier of a record within a partition. It denotes the position of the consumer in the partition. Kafka maintains this offset per partition, per consumer group, allowing each consumer group to read from a different position in the partition. This enables kafka to provide both queue and publish-subscibe messaging models.
 
 
-# 10. How does kafka handle message delivery semantics?
+# 10. How does kafka handle message delivery semantics? or How does kafka handle message delivery guarantees?
     => kafka supports 3 message delivery semantics:
        1. At most once: Messages may be lost but are never redelivered.
        2. At least once: Messages are never lost but may be redelivered.
@@ -139,4 +139,39 @@
     => it provides a serving layer for metadata. It provides a RESTful interface for storing and retriving AVRO schemas its used in conjunction with kafka to ensure that producers and consumers use compatiable schemas.
 
 # 32. How does kafka handle topic deletion?
-    => 
+    => When a topic gets deleted in kafak, following steps occurs:
+    1. Topic is marked for deletion in zookeeper.
+    2. Kafka Stops serving data for that topic.
+    3. The actual log segments on disk are asynchronously deleted This process ensures that topic deletion doesn't impact the performance of other operations.
+
+# 33. Purpose of kafka consumer heartbeat thread?
+    => Kafka consumer heartbeat thread is responsible for sending period heartbeats to the kafka broker, These heartbeats indicates that the consumer is alive and still part of the consumer group. If a consumer fails to send heartbeats for a configurable period, It's considered dead, and the group coordinator will a trigger a rebalance to reassign it partitions to other consumers in the group.
+
+# 34. How does kafka handle message ordering across multiple partitions?
+    =>  Kafka, only guarantees message ordering within a single partition. Across multiple partitions, there is no guarantee of message ordering. If global ordering is required, its typically achived by using a single partition for the topic, but this limits scalability.
+
+
+# 35. How kafka handle Consumer lag?
+    => Consumer lag in kafka referes to the difference b/w the offset of the latest produced message and the offset of the last consumed message, kafka provides tools and APIs to monitor consumer lag.
+
+# 36. What is the purpose of kafka producer's Partitioner Interface?
+    => partitioner interface in kafka's producer API determine which partition in the topic a message will be sent to. 
+
+# 37. How does kafka handle message delivery timeouts?
+    => Kafka producers can be configured with delivery timeout, if a message cannot successfully acknowledged within this timeout period, the producer will consider the send failed and may retry (depending on configuration). On the consumer side, there's a **max.poll.intervals.ms** setting that controls how long a consumer can go without pooling before its considered failed and a rebalance is triggered.
+
+# 38. Purpose of Kafka Streams DSL?
+    => it provides High level API for stream processing operations. It allows developers to express complex processing logic filtering, transforming, aggregating and joining streams of data.
+
+# 39. How does kafka handle message validation?
+    => kafka itself doesn't perform message validation beyound ensuring that messages don't exceed the configured maximum size. Message validation is typically handled at the producer or consumer level., producer can implement validation logic before sending messages, while consumer can validate message after receving them.
+
+
+# 40. How does kafka handle message retention across multiple data centers?
+    => MirrorMaker is responsible for message retention accorss multiple data centers, it is stand-alone tool for copying data b/w kafka clusters.
+
+# 41. How does kafka handle message consumption patterns?
+    => it supports 2 main consumption patterns:
+        1. Queue: Each message is processed by one consumer within a consumer group. This is achived by having multiple consumers in a group, each reading from exclusive partitions.
+        2. Publish-Subscribe: All messages are processed by all consumers. This is achived by having each consumer in its own consumer group, allowing all consumers to read all messages. These patterns can be combined and customized to fiz various use cases.
+        
