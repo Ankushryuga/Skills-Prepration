@@ -437,6 +437,8 @@ Intermediate Operations are running based on the concept of Lazy Evaluation, whi
 
 
 # 54: Volatile vs Transient variable in java?
+![image](https://github.com/user-attachments/assets/0c47adf1-db3c-4e45-9f91-4ee06c6cc55a)
+
       => 
       1. Volatile Variable:  used agains the variable indicates that content of the variable is stored in the main memory and every read of the variable should be done from the main memory and not the CPU cache and every write should be written to the main memory and not just to the CPU cache.
 
@@ -446,4 +448,12 @@ Intermediate Operations are running based on the concept of Lazy Evaluation, whi
       Transient: provides flexibility and control over the attributes of objects from being serialized.
       3. Volatile variables: don't have any default values, transient variables are initialized with default value corresponding to the data type at the time of deserialization
       
-      
+
+      # Access modifier:
+      Comparison Table of Access Modifiers in Java
+      When to Use Each Access Modifier in Real-World Projects
+      Private: This is used for encapsulating sensitive data and internal helper methods that should not be accessed outside the class.
+      Example: Private fields in a model class with getter and setter methods.
+      Default (Package-Private): This is suitable for classes and methods that should only be accessible within the same package, often used in package-scoped utilities or helper classes.
+      Protected: This is ideal for methods and fields that should be accessible within the same package and subclasses, commonly used in inheritance-based designs like framework extensions.
+      Public: This is used for classes, methods, or fields meant to be accessible from anywhere, such as API endpoints, service classes, or utility methods shared across different parts of an application.
