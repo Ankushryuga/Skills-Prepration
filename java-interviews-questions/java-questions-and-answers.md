@@ -436,5 +436,14 @@ Intermediate Operations are running based on the concept of Lazy Evaluation, whi
 
 
 
+# 54: Volatile vs Transient variable in java?
+      => 
+      1. Volatile Variable:  used agains the variable indicates that content of the variable is stored in the main memory and every read of the variable should be done from the main memory and not the CPU cache and every write should be written to the main memory and not just to the CPU cache.
 
+        Transient Variable: its used when we do not want the variable to be serialised ( converting to byte stram).
 
+      2. volatile ensures that the JVM does not re-order the variables and ensures that the synchronoization issues are avoided.
+      Transient: provides flexibility and control over the attributes of objects from being serialized.
+      3. Volatile variables: don't have any default values, transient variables are initialized with default value corresponding to the data type at the time of deserialization
+      
+      
