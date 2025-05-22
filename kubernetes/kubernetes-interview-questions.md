@@ -116,5 +116,38 @@
 
 # 20. How to run kubernetes locally?
     => using Minikube tool, it runs a single-node bunch in a VM on the computer.
-    
+
+# 21. What is kubelet?
+    => Its an important component of kubernetes that manages containers within pods on a node, kubelet keeps an eye on container health and responds to problems.
+
+# 22. What is container orchestration?
+    => its a tool, used to automate life cycle management of the containers. It provides a automatic deployment, scaling and management of containerized applications so that the developers do not have any worry about the underlying infrastructure.
+
+
+# 23. What is the role of a Master node in kubernetes?
+    => kubernetes master node components can be run within kubernetes itself, as a set of containers within the dedicated pod.
+    The master node is responsible for cluster management and for providing the API that is used to configure and manage resources within the kubernetes cluster.
+
+# 24. What is a ConfigMap?
+    => its an API Object in Kubernetes that primarily used to store non-confidential data. ConfigMaps are a way to kubernetes to inject configuration data into application pods.
+
+# 25. Role of etcd in kubernetes.
+    => its cluster brain that maintain records of all cluster information, which includes the desired state, the current state, resource configurations, and runtime data.
+
+
+# 26. What advantages does Kubernetes have?
+    => Kubernetes has the following advantages:
+    1. Container Orchestration
+    2. Automated Load Balancing
+    3. Auto Scaling
+    4. Rolling Update & Rollbacks
+    5. Service Discovery and Load Balancing
+    6. Storage Orchestration
+    7. Self-Healing
+    8. Secrets and Configuration Management
+    9. Multi-Cloud and Hybrid Cloud Support
+    10. Role-Based Access Control (RBAC)
+    11. Pods and Multi-Container Support
+    12. Monitoring and Logging
+
         
