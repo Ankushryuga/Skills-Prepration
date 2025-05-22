@@ -11,7 +11,7 @@
       => Encapsulation is a concept in OOPs for combining properties and methods in a single unit. Encapsulation helps developers follow a modular approach for S/W development because each object has its own set of methods and variables and serves its functions independent of other objects, encapsulation serves Data hiding purpose.
 
 # 5. **What is polymorphism and what are the types of polymorphism, and how do they differ?**
-      => Its one interface with many implementations, This characteristic allows you to assign a different meaning or usage to something in different context. For exampl, you can use polymorphims to enable more than one form for entities, such as variables, functions, or objects.
+      => Its one interface with many implementations, This characteristic allows you to assign a different meaning or usage to something in different context. For example, you can use polymorphims to enable more than one form for entities, such as variables, functions, or objects.
       => There are 2 types of polymorphism: 1. Compile-time polymorphism is method overloading, 2. Run - time polymorphism uses inheritance and interface.
 
 # 6. **What does an interface in jave refer to?**
@@ -49,7 +49,7 @@
        b. JRE refers to a runtime environmentthat allows programmers to execute byte code.
        c. JRE is a physical implementation of the JVM.
 
-# 12. **In Java, what are the differences b/w Head and stack memory?**
+# 12. **In Java, what are the differences b/w Heap and stack memory?**
     => **Memory**:
           a. **Stack memory** is used only by one thread of execution.
           b. All the parts of the application use **heap memory**. 
