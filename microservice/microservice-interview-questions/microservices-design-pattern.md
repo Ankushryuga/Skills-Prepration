@@ -12,7 +12,7 @@
         b. Database per service pattern.
         c. Circuit Breaker Pattern.
         d. Service Discovery Pattern.
-        e. Event Sourcing Pattern.
+        e. Event Sourcing Pattern. 
         f. CQRS pattern.
         g. Saga Pattern.
         h. Strangler Fig Pattern.
