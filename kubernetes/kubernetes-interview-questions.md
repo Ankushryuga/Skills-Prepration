@@ -20,7 +20,7 @@
 
 
 
-# 3. What is POD?
+# 3. What is POD (Proof of delivery)?
     => A POD are the smallest unit of objects that can be deployed on kubernetes, kubernetes packages one or more containers into a higher-level strcture called a POD.
       POD runs one level higher than the container.
     => POD always runs on a Node but they share a few resources which can be shared volumes, cluster unique IP, and info about how to run each containers.
