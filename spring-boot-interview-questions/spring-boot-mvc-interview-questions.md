@@ -215,4 +215,107 @@
          return builder.routes().route(-> r.path("/myService/**").uri("lb://MY-SERVICE").id("myServiceRoute)).build();
       }
 
-# 
+# 20. How do you handle Transactions in a Spring Boot Applications?
+      => Spring Boot offeres support for declarative transsactions using **@Transactional** to manage transactions at the method level.
+      1. Propagation: You can define how a transaction behave with **REQUIRES_NEW, REQUIRES_EXISTING, etc**.
+      2. Isolation: Set transaction insolation levels like READ_COMMITED OR SERIALIZEABLE based on requirements.
+      Example:
+      @Transactional(isolation = Isolation.READ_COMMITTED)
+      public void transferFuncds(){
+      
+      }
+      
+
+# 21. Difference b/w @RequestMapping, @GetMapping, @PostMapping etc, in Spring Boot?
+      => 
+      1. @RequestMapping: A general-purpose annotation used to map HTTP requests to handler methods.
+      2. @GetMapping:  Shortcut for @RequestMapping(method=RequestMethod.GET).
+      3. @PostMapping: Shortcut for @RequestMapping(method=RequestMethod.POST).
+
+# 22. How do you implement file upload and download functionality in Spring Boot?
+      => Spring boot provides simple mechanisms to handle file uploads using **@RequestParam** and **MultipartFile**.
+      1. File upload: Use MultipartFile to handle file uploads.
+      2. File Download: Set the correct response headers to serve file to the user.
+      
+      Example:
+      @PostMapping("/upload")
+      public String handleFileUpload(@RequestParam("file") MultipartFile file){
+            file.transferTo(new File("uploads/" + file.getOriginalFileName());
+            return "File uploaded successfully";
+      }
+
+
+# 23. What are Spring Boot Profiles, how do you manage different configurations for various environments?
+      => profiles allows you to segregate parts of your application configuration and make it available only certain environments.
+      1. Active Profiles: Use spring.profiles.active to specify which profile is active.
+      2. Profile-specific configuration: Define separate application-{profile}.properties or application-{profile}.yml files.
+
+
+# 24. How do you implement JWT-based authentication in Spring Boot?
+      => its widely used for stateless authentication in micrservices.
+      1. Create JWT Tokens: use a custom filter to generate JWT tokens after authentication.
+      2. Validate Tokens: Use Spring security filters to validate the JWT token with every request.
+
+      Example: 
+      public String generateToken(Authentication authentication){
+            return jwts.builder().setSubject(authentication.getName()).setIssuedAt(new Date()).setExpiration(new Date(System.currentTimeMillis() + JWT_EXPIRATION)).signWith(SignatureAlgorithm.HS512, JWT_SECRET).compact();
+      }
+
+
+
+# 25. How do you configure and use Spring Boot with Docker for containerization?
+      => Docker allows you to containerize your Spring Boot application for better portability.
+      1. Dockerfile: create a Dockerfile to define the build process.
+      2. Build and Run: Use docker build and docker run to package and deploy you application.
+
+      Example: Dockerfile:
+      FROM openjdk:11-jre-slim
+      COPY target/myapp.jar /app/myapp.jar
+      ENTRYPOINT ["java", "-jar", "/app/myapp.jar"]
+
+
+# 26. How do you implement rate-limiting in a Spring Boot application?
+      => To protech API from overuse, implementing rate-limiting is good idea, this can be achieved using Spring Cloud Gateway or a custom implementation.
+      1. Spring Cloud Gateway: Use RateLimiter filter to limit the number of requests.
+      2. Custom Implementation: use an in-memory store or Redis to track the number of request per user.
+      Example:
+      @Bean
+      public RouteLocator customRouteLocator(RouteLocatorBuilder builder) {
+            return builder.routes().route(r-> r.path("/api/**").filters(f->f.requestRateLimiter().rateLimiter(RateLimiter.class).config(new RequestRateLimiter.config(10, 20))).uri("http://myservice")).build();
+      }
+
+
+# 27. How do you implement a custom exception handler in Spring Boot?
+      => Spring Boot provides global exception handling via **@ControllerAdvice**.
+      Example: 
+      @ControllerAdvice
+      public class GlobalExceptionHandler{
+            @ExceptionHandler(ResourceNotFoundExcaption.class)
+            public ResponseEntity<ErrorResponse> handleResourceNotFound(ResourceNotFoundException ex){
+                  ErrorResponse errorResponse=new ErrorResponse(ex.getMessage(), HttpStatus.NOT_FOUND.value());
+                  return new ResponseEntity<>(errorResponse, HttpStatus.NOT_FOUND);
+            }
+      }
+
+# 28. How do you use Spring Boot's @Scheduled annotation for backgroundTask?
+      => Its like cron jobs for fixed-delay task.
+      Example:
+      @Scheduled(fixedRate=5000)
+      public void reportCorrentTime(){
+            System.out.println("current time"+System.currentTimeMillis());
+      }
+
+
+# 29. How do you implement Spring boot with NoSQL database like MongoDB or Cassandra?
+      => MongoDB: use spring-boot-starter-data-mongodb 
+      => Cassandra: use spring-boot-starter-data-cassandra
+
+# 30. How do you implement spring boot with Mysql/postgreSQL databases?
+      => spring.datasource.url=jdbc:postgresql://localhost:5432/Test
+      #spring.datasource.username=postgres
+      #spring.datasource.password=1234
+      #spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect
+      #spring.jpa.hibernate.ddl-auto=update
+      #spring.sql.init.mode=always
+
+# 31. 
