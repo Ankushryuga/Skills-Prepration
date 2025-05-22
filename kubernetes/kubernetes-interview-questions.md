@@ -77,5 +77,44 @@
         b. Kube-schedular: Schedule PODs according to available resources on executor nodes.
         c. Kube-controler-manager: Its a control loop that watches the shared state of the cluster through the apiserver and makes changes attempting to move the current state towards the desired stable state.
 
+
+# 12. How do we control the resource usage of POD?
+    => With the use of limit and request resource usage of a POD can be controlled.
+    1. Request: The number of resources being request for a container. If a container exceeds its request for resources, it can be throttled back down to its request.
+    2. Limit: An upper cap on the resources a signle container can use. If it tries to exceed this predefined limit it can be terminated if K8's decides that another container needs these resources.
+
+
+# 13. What is ingress Default Backend?
+    => it specifies what to do with an incoming request to the kubernetes cluster that isn't mapped to any backend i.e, what to do when no rules being defined for the incoming HTTP request if the default backend service is not defined, it's recommended to define it so that users still see some kind of message instead of unclear error.
+
+# 14. What is GKE?
+    => its Google Kubernetes Engine that is used for managing and orchestrating systems for Docker containers.
+
+# 15. WHat is the purpose of operators?
+    => It paves the way for a standard process to be automated acros several kubernetes clusters.
+
+
+# 16. What is an operator?
+    => As an extension to K8, the operaror provides the capability of managing applications and their components using custom resources. Operators generally comply with all the principles relating to kubernetes, especially those relating to the control loops.
+
+# 17. Why should namespaces be used?
+    => The namespaces allow applications to be organized into groups that make sense, such as a namespace for all monitoring applicationis and another for all security applications.
+    namespaces can be used for managing Blue/Green environments.
+
+# 18. How should TLS be configured with Ingress?
+    => spec:
+        tls:
+        -hosts:
+            -some_app.com
+        secretName:someapp-secret-tls
+
+# 19. What is kubernetes Load Balancing?
+    => Load Balancing is one of the most common and standard ways of exposing the services. There are 2 types of load balancing in k8s and they are:
+    1. Internal Load Balancer: This type of balancer automatically balances loads and allocates the pods with the required incoming load.
+    2. External Load Balancer: This type of balancer directs the traffic from the external loads to backend pods.
+
+
+# 20. How to run kubernetes locally?
+    => using Minikube tool, it runs a single-node bunch in a VM on the computer.
     
         
