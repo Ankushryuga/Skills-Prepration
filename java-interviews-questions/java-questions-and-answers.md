@@ -95,7 +95,7 @@
       ## Java class, variable, objects, and argument questions.
     
 # 20. **What is a class in Java?**
-    => All java codes are defined in a class, it has variables and methods.
+    => Class is blueprint for creating Objects, All java codes are defined in a class, it has variables and methods.
 
 # 21. **What is a variable within Java?**
     => variables are attributes that define the state of a class.
