@@ -13,7 +13,9 @@
 # 5. **What is polymorphism and what are the types of polymorphism, and how do they differ?**
       => Its one interface with many implementations, This characteristic allows you to assign a different meaning or usage to something in different context. For example, you can use polymorphims to enable more than one form for entities, such as variables, functions, or objects.
       => There are 2 types of polymorphism: 1. Compile-time polymorphism is method overloading, 2. Run - time polymorphism uses inheritance and interface.
-
+      => COmpilile TIme: Method overloading
+      => RUntime: Method overriding and virtual functions.
+      
 # 6. **What does an interface in jave refer to?**
       => An interface as it relates to java is a blueprint of a class or a collection of abstract methods and static constants.
       => Each methods is public and abstract, but it does not contain any constructor.
