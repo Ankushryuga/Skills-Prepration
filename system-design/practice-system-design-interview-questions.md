@@ -4,9 +4,10 @@
     2. https://www.youtube.com/playlist?list=PLMCXHnjXnTnvo6alSjVkgxV-VH6EPyvoX
     3. https://www.youtube.com/@SDFC
     4. https://github.com/ByteByteGoHq/system-design-101
+    5. https://github.com/prasadgujar/low-level-design-primer/tree/master
 
 
-# Questions:
+# Practice Questions On System Design.:
     =>
     - Design subscription-based sports website which can display scores, game status, history for any games.
     - Design for online card game say like poker or any other game. 
@@ -332,3 +333,60 @@
      - Each book and member card will have a unique barcode. The system will be able to read barcodes from books and members’ library cards.
     
     -  Design an API rate limiter.
+    -  Design a Blogging Platform.
+    -  Design Online Offline Indicator.
+    -  Design Airline Check-In.
+    -  Design SQL backend KV Store.
+    -  Design Slack's Realtime communication
+    -  Design a Load Balancer.
+    -  Design synchronized queue consumers.
+    -  Design an image service.
+    -  Design a HashTag service.
+    -  Design OnePic.
+    -  Design Photo Tagging.
+    -  Design User Affinity.
+    -  Design Newly unread message indicator.
+    -  Design a Distributed Cache.
+    -  Design a word dictionary.
+    -  Design a superfast KV Store.
+    -  Design S3.
+    -  Design a Faster Superfast KV Store.
+    -  Design a Video processing pipleline for straming service.
+    -  Design a text-based search engine.
+    -  Design a service that serves Recent Searches for a user.
+    -  Design a Test-based cricker commentry service.
+    -  Design a SQL backed Message Broker.
+    -  Design a Distributed Task Scheduler.
+    -  Design Flash Sale.
+    -  Design Counting impressions at scale.
+    -  Design a Remote File Sync Service.
+    -  Design a "Who's near me" service.
+
+
+# Some more:
+    => Must-Do Problems
+        Easy
+            Design TinyURL
+            Design Distributed Job Scheduler
+            Design Yelp
+            Design Parking Garage
+            Design Mint
+            Design Distributed Key-Value Store
+        Medium
+            Design YouTube
+            Design TikTok
+            Design Spotify
+            Design Facebook
+            Design Notification Service
+            Design Twitter
+            Design Dropbox
+            Design Distributed Cache
+            Design Google Search
+        Hard
+            Design Uber
+            Design Google Maps
+            Design Doordash
+            Design Distributed Counter
+            Design Rate Limiter
+            Design Distributed Message Queue
+            Design Slack
