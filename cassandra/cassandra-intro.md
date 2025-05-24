@@ -30,4 +30,11 @@
     2. Real-Time analytics
     3. IOT Applications.
     4. Recommendation engines.
+
+
+# Modeling Approach In Cassandra:
+    =>    Application    ->     Model    ->    Data.
+
+
+# 
     
