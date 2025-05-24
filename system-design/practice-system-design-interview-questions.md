@@ -5,6 +5,7 @@
     3. https://www.youtube.com/@SDFC
     4. https://github.com/ByteByteGoHq/system-design-101
     5. https://github.com/prasadgujar/low-level-design-primer/tree/master
+    6. https://github.com/sid24rane/System-Design-Interview-Questions/blob/master/README.md
 
 
 # Practice Questions On System Design.:
