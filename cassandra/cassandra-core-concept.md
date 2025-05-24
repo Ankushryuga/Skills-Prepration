@@ -1,3 +1,6 @@
+# More Resources:
+    => https://www.eduonix.com/courses/Web-Development/Learn-Apache-Cassandra-from-Scratch
+
 #  Architecture overview:
     => Cassandra is distributed NoSQL database designed for scalability and high availability.
        its architecture include:
