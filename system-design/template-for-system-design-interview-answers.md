@@ -4,7 +4,8 @@
 https://blog.algomaster.io/p/how-to-answer-a-system-design-interview-problem
 https://github.com/PacktPublishing/Learn-Spring-Boot-in-100-Steps---Beginner-to-Expert
 
-![img_1.png](img_1.png)
+![image](https://github.com/user-attachments/assets/e43bc064-aa74-4865-bff1-4eaa8967ccee)
+
 
 # Step 1:   Clarify Requirement (Because question will be vague, its your responsibility to ask question don't assume anything (very important)).
         => Understand the problem statement, clarify any ambiguities and gather as much information as possible about the system's you're being asked to design.
@@ -29,6 +30,8 @@ https://github.com/PacktPublishing/Learn-Spring-Boot-in-100-Steps---Beginner-to-
             4. Global Read performance.
 
 # Step 2: Capacity Estimation
+![image](https://github.com/user-attachments/assets/5f974903-164f-4eab-a581-a2fce7fbf9e0)
+
         => After clarifying the requirements, you can do some calculations to estimate the 
            capacity of the system you are going to design.
         => get at least rough idea of the number of requests and storage requirements.
@@ -47,7 +50,7 @@ https://github.com/PacktPublishing/Learn-Spring-Boot-in-100-Steps---Beginner-to-
         => Break down the system into major components or modules, such as the frontend, backend, databases, caches, and external services.
         => Draw a simple block diagram that outlines the major system components and the high-level flow of data and requests through the system, 
            from the client to the backend and back.
-![img.png](img.png)
+![image](https://github.com/user-attachments/assets/c83d07d7-82fb-460e-a02f-196f9bedcfb2)
         
         => What to include in your diagram?
         1. Client Applications: Indicates how users will interact with the system (web browser, mobile app, desktop etc).
@@ -82,7 +85,7 @@ https://github.com/PacktPublishing/Learn-Spring-Boot-in-100-Steps---Beginner-to-
         5. Consider normalization techniques to ensure data integrity and minimize redundancy.
     
         => Choose the Right Storage:
-![img_2.png](img_2.png)
+![image](https://github.com/user-attachments/assets/1d236757-3fe6-41d2-904b-2f3ad88ac76e)
 
         1. Evaluate the requirements and characteristics of the data to determine the most suitable database type.
         2. Consider factors such as data structure, scalability, performance, consistency, and query patterns.
@@ -91,7 +94,7 @@ https://github.com/PacktPublishing/Learn-Spring-Boot-in-100-Steps---Beginner-to-
         5. Consider using a combination of databases if different data subsets have distinct requirements.
         
         => Design the database schema:
-![img_3.png](img_3.png)
+![image](https://github.com/user-attachments/assets/f0681778-a7f3-4f0d-beb3-30de3f573e62)
         
         1. Define the tables, columns, and data types, and relationships based on the chosen database type.
         2. Specify the primary key, foreign key, and any necessary indexes to optimize query performance.
@@ -152,7 +155,7 @@ https://github.com/PacktPublishing/Learn-Spring-Boot-in-100-Steps---Beginner-to-
         => This step involves identifying and addressing the core challenges that your system design is likely to encounter.
         These challenges can range from scalablity and performance to reliablity, security, and cost concerns.
         # Addressing scalability and performance concerns.
-![img_4.png](img_4.png)
+![image](https://github.com/user-attachments/assets/2d64d902-6c11-4177-bc2c-e3b5ba2c7582)
 
         1. Scale horizontally (Scale-out) by adding more nodes and use load balancers to evenly distribute the traffic among the nodes.
         2. Scale vertically (Scale-up) by increasing the capacity of individual resources (e.g., CPU, memory, storage).
@@ -167,7 +170,7 @@ https://github.com/PacktPublishing/Learn-Spring-Boot-in-100-Steps---Beginner-to-
         # Addressing Reliablity:
         Reliability refers to a system's ability to function correctly and consistently, even in the presence of failures or errors.
 
-![img_5.png](img_5.png)
+![image](https://github.com/user-attachments/assets/a01877e3-f9f1-4442-90c3-ea960009b0c1)
         
         => Here are some key considerations for making our system more reliable:
         
