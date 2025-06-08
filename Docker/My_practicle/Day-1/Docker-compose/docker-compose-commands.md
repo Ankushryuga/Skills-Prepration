@@ -47,3 +47,18 @@
     => Copy files to the container
     1. docker compose cp [SRC_PATH] [containerId]:[DEST_PATH]
 
+
+
+
+# Docker compose:
+    => build the service
+    1. docker compose build
+    => build, (re)creates, starts, attaches to containers for a service
+    1. docker compose up
+    => list the services
+    1. docker compose ps
+    => bring down what was created by up.
+    1. docker compose down
+
+
+
