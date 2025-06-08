@@ -62,3 +62,8 @@
 
 
 
+# check the logs of the containers:
+    =>
+    docker compose logs -f servicename
+
+
