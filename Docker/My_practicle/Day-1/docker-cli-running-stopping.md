@@ -74,5 +74,23 @@
     => Remove all images not in use by any containers.
 
 
+## running the container:
+    => docker run -d -p 8080:80 --name webserver nginx
 
+## Attach to the container:
+    => docker container exec -it webserver bash
+
+## stop the container   
+    => docker stop webserver
+
+## Remove the container from memory
+    => docker rm webserver
+
+## Remove the image
+    => docker rmi nginx
+
+
+
+
+    
     
