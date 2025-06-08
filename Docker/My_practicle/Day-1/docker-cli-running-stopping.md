@@ -24,3 +24,13 @@
 
 ## docker image inspect  [imageName]
     => Get image info
+
+**docker set memory**
+
+## docker run --memory="256m" nginx        
+    // Max memory
+
+## docker run --cpus ".5" nginx
+    // Max CPU
+
+    
