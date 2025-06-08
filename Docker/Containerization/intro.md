@@ -31,7 +31,6 @@ the **FROM** instruction specifies the base image from which you are building. *
 **FROM** instructions support variables that are declared by any **ARG** instructions that occur before the first FROM.
 
 
-
-
-
+## Containers are ephemerous and stateless
+    > 
 
