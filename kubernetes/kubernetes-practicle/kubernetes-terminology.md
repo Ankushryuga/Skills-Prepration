@@ -47,4 +47,9 @@ NOTE: in a pod there can be multiple containers: one port one server
     it's a command-line tool for inter-acting with the kubernetes API. It allows users to manage resources within a kubernetes cluster, including deploying applications, managing cluster resources, and monitoring   deployments.
 
     All the containers in the POD, shares name space of the pod.  
+
+
+## minikube: It creates kubernetes cluster with single node (its workernode and master node both).
+
+
     
