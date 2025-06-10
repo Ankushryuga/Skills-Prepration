@@ -1,5 +1,12 @@
 # All about cassandra and Cassandra with Java Spring Boot.
 
+# Cassandra Ports:
+    => Cassandra, by default, uses port 9042 for client connections using native protocol. 
+       It also uses port 7000 for inter-node communication within the cluster, 
+       and port 7001 for inter-node communication when TLS is enabled
+       7199: Java Management Extensions.
+    
+
 # Intro:
     => Cassandra, its a highly scalable, distributed NoSQL database designed to handle large amounts of data across many commodity servers, 
        providing high availability with no single point of failure
