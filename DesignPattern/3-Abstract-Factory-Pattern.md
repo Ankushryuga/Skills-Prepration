@@ -92,3 +92,14 @@
       	public Computer createComputer();
       
       }
+
+
+
+
+# Abstract Factory Design Pattern Benefits
+      =>
+      1. Abstract Factory design pattern provides approach to code for interface rather than implementation.
+      2. Abstract Factory pattern is “factory of factories” and can be easily extended to accommodate more products, for example we can add another sub-class Laptop and a factory LaptopFactory.
+      3. Abstract Factory pattern is robust and avoid conditional logic of Factory pattern.
+
+      
