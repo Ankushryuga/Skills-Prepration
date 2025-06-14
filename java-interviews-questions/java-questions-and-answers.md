@@ -1,6 +1,8 @@
 # Resource:
 
 https://akcoding.medium.com/java-technical-lead-interview-questions-for-10-years-experience-e7f5d8ec530f
+https://anvita0707.medium.com/cracking-the-technical-lead-interview-1e9305535803
+https://in.indeed.com/career-advice/interviewing/technical-lead-interview-questions
 
 # 1. **What is Java?**
       => Java is a platform-independent high-level programming language, it is platform-independent because its bytes codes can run on any system regardless of its OS.
